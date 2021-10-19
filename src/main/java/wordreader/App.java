@@ -11,12 +11,12 @@ public class App
     public static void main( String[] args )
     {
         try {
-            File myObj = new File("test.txt"); // get file 
-            Scanner myReader = new Scanner(myObj);
+            File testFile = new File("test.txt"); // get file 
+            Scanner myReader = new Scanner(testFile);
             String fileText = "";
             while (myReader.hasNextLine()) { // read file contents line by line
-                String data = myReader.nextLine();
-                fileText = fileText + " " + data;
+                String fileLine = myReader.nextLine();
+                fileText = fileText + " " + fileLine;
             }
             myReader.close();
             fileData(fileText);
